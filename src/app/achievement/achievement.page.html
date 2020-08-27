@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>Achievement</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+ <ion-grid padding>
+   <ion-row color="aqua" justify-content-center>
+    <ion-col align-self-center size-md="3" size-lg="5" size-xs="13">
+              <div padding>
+                <ion-list>
+                  <ion-item>
+                    <ion-label position="stacked"> Student Name: {{ name }}</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label position="stacked">Reg No: {{ regno }}</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label position="stacked">Department: {{ dept }}</ion-label>  
+                  </ion-item>
+                  <ion-item>
+                    <ion-label position="floating">Category*</ion-label>
+                    <ion-input type="text" [(ngModel)] = "category"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label position="floating">Sub Category(Specific and Unique)</ion-label>
+                    <ion-input type="text" [(ngModel)] = "scategory"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label position="floating"> Recieved Date of the Award*</ion-label>            
+                    <ion-label position="floating"></ion-label>
+                   <ion-input type="date" [(ngModel)] = "rdate"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label position="floating">Details of the Award</ion-label>
+                    <ion-textarea type="text" [(ngModel)] = "details"></ion-textarea>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label position="floating">Proof of the Award*</ion-label>
+                    <ion-input type="file" [id]="pic" [(ngModel)] = "proof"></ion-input>
+                  </ion-item>
+                </ion-list>
+              </div>
+                <div padding>
+                    <ion-button shape="round" (click)="trySubmit()" [disabled]="disabledButton" >Submit</ion-button>
+                </div>
+                <ion-row>
+                 <ion-col style="text-align: center;">
+                  <a (click)="tryHome()">Go to Home</a>
+                 </ion-col>
+                </ion-row>   
+    </ion-col>
+   </ion-row>
+  </ion-grid>
+</ion-content>

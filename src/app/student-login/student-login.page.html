@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>
+       Student Login
+     </ion-title>
+     <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form  #form="ngForm" >
+    <ion-grid padding>
+        <ion-row color="aqua" justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div padding>
+            <ion-item>
+              <ion-input type="text" placeholder="USERNAME" [(ngModel)]="username" name="username"></ion-input>
+            </ion-item>
+            <ion-item>
+             <ion-input type="password"  placeholder="PASSWORD" [(ngModel)]="password" name="password"></ion-input>
+            </ion-item>
+          </div>
+          <ion-row>
+            <ion-col style="text-align:center; border:none">
+              <ion-button fill="solid" size="default" color="secondary" shape="round"  (click)="trystudentlogin()" [disabled]="disabledButton">Sign In
+              </ion-button></ion-col></ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col style="text-align:center; border:none">
+              <a (click)="tryforgot()">Forgot Password?</a>
+              </ion-col></ion-row>
+      </ion-grid>
+    </form>
+  </ion-content>
+  

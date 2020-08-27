@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>
+      MyAchievements
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-row>
+      <ion-col text-center button-center>
+        <ion-text color="light">
+            <h2>Welcome to TCE Students Achievement</h2>
+            <h3>Record of your Success!</h3>
+        </ion-text>
+        <ion-row>
+          <ion-col style="text-align:center">
+            <ion-button fill="outline" size="large" color="secondary" shape="round"  (click)="tryStudLogin()">
+              Student Login
+            </ion-button>
+          </ion-col>
+          <ion-col style="text-align:center">
+              <ion-button fill="outline" size="large" color="secondary" shape="round" (click)="tryStaffLogin()">
+                Staff Login
+              </ion-button>
+            </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    
+</ion-content>

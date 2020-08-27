@@ -1,0 +1,21 @@
+ion-content{
+    font-style: oblique;
+    
+    --background: url('C:/Apache24/htdocs/workshop/app/src/assets/icon/bg3.jpg') no-repeat 0 0/100% 100%;
+}
+
+.edit-button{
+    position: absolute;
+    top: 140px;
+    right:45px;
+}
+.achievement-button{
+    position: absolute;
+    top: 210px;
+    right: 20px;
+}
+.logout-button{
+    position: absolute;
+    top: 400px;
+    right: 85px;
+}

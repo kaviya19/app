@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>View Achievement</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="downloadCSV()">
+        <ion-icon name="download"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+  
+  <ion-content>
+  
+    <ion-item>
+      <ion-label>Filter</ion-label>
+      <ion-select #C multiple="true" >
+        <ion-select-option value="1" >ALL</ion-select-option>
+        <ion-select-option value="2">CSE</ion-select-option>
+        <ion-select-option value="3" >IT</ion-select-option>
+        <ion-select-option value="4">ECE</ion-select-option>
+        <ion-select-option value="5">EEE</ion-select-option>
+        <ion-select-option value="6">MECH</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    
+    
+    <table border="1" class="data-table">
+      <tr>
+        <td *ngFor="let data of header" text-center><b>{{data}}</b></td>
+      </tr>
+      <tr *ngFor="let row of tds">
+        <td *ngFor="let col of row; trackBy:trackByFn">
+        {{ col}} 
+      </td>
+      </tr>
+    </table>
+    <label>{{sc}}</label>
+    
+    <ion-row>
+      <ion-col style="text-align: center;">
+       <a (click)="tryHome()">Go to Home</a>
+      </ion-col>
+     </ion-row>  
+</ion-content>

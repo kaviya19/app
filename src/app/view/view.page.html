@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>view</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <label>The achievements are: </label>
+  <br> 
+  <ul class="list-group">
+    <li *ngFor="let data of finalstr; let i=index" class="list-group-item">
+      {{ finalstr[i]}} <ion-button style="float:right" shape="round" (click)="tryEdit(i)"  size="small" [disabled]="disabledButton" >edit</ion-button>
+    </li>
+  </ul>
+  <ion-row>
+    <ion-col style="text-align: center;">
+     <a (click)="tryHome()">Go to Home</a>
+    </ion-col>
+   </ion-row>  
+</ion-content>
+
